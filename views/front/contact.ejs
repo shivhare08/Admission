@@ -1,0 +1,50 @@
+<%- include('../layout/header2.ejs') %>
+
+<section class="contact mt-5">
+    <div class="container">
+        <div class="row">
+            <h4 class="text-center" style="font-family: serif;">If you need any help , you can clear here by sending us message <span class="text-danger">We will replay your doubt as soon as possible</span></h4>
+            <% if(message.length > 0){ %>
+                <div class="alert alert-success" style="font-family:'Courier New', Courier, monospace">
+                    <%= message %>
+                </div>
+            <% } %>
+            <div class="row">
+                <div class="col-md-6 mt-2">
+                    <h3 style="font-family: serif;" class=" align-middle"><img src="/image/contact.jpg" class="img-fluid w-100 mt-5"> </h3>
+                </div>
+                <div class="col-md-6 mt-2">
+                    <form action="/admin/contact" method="POST">
+                        <label><h5 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Nam<span class="text-danger">e</span></h5></label>
+                        <input class="form-control" name="name" placeholder="name" type="text" style="border-bottom: 1px red solid; border-top: none; border-right: none; border-left:1px solid red;"><br>
+
+                        <label><h5 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Ema<span class="text-danger">il</span></h5></label>
+                        <input class="form-control" name="email" placeholder="email" type="email" style="border-bottom: 1px red solid; border-top: none; border-right: none; border-left:1px solid red;"><br>
+
+                        <label><h5 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Query<span class="text-danger">related?</span></h5></label>
+                        <select class="form-select" name="reason" style="border-bottom: 1px red solid; border-top: none; border-right: none; border-left:1px solid red;">
+                            <option selected>Select Reasons</option>
+                            <option value="Need help?">Need help?</option>
+                            <option value="College related">College related</option>
+                            <option value="Branch related">Branch related</option>
+                            <option value="City related">City related</option>
+                            <option value="Fees related">Fees related</option>
+                            <option value="Othes">Othes</option>
+                        </select><br>
+
+
+                        <label><h5 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Mess<span class="text-danger">age</span></h5></label>
+                        <textarea class="form-control" rows="2" name="message" placeholder="write message here"  style="border-bottom: 1px red solid; border-top: none; border-right: none; border-left:1px solid red;"></textarea><br>
+
+                        <button class="btn btn-danger">Send</button>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br><br><br>
+
+<%- include('../layout/footer.ejs') %>

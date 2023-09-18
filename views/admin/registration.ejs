@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Griveance Project</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+
+	<!-- BOOTSTRAP LINK -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+	<!-- Fontawesome Links -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+</head>
+<body>
+
+<section class="login">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="background2">
+            	<form action="/admin/fillform" method="POST">
+            		<div class="frm" style="padding: 5% 30% 0% 28% ;">
+						<% if(message.length > 0){ %>
+							<div class="alert alert-danger" style="font-family:'Courier New', Courier, monospace">
+								<%= message %>
+							</div>
+						<% } %>
+            			<div>
+            				<label class="form-label text-light pt-2"><i class="fa-solid fa-signature"></i> Name</label>
+            			    <input type="name" name="name" class="form-control text-light" placeholder="name" style="background: #00968836;">
+
+            			    <label class="form-label text-light pt-2"><i class="fa-solid fa-envelope"></i> Email</label>
+            			    <input type="Email" name="email" class="form-control text-light" placeholder="email" style="background: #00968836;">
+
+							<label class="form-label text-light pt-2"><i class="fa-solid fa-phone"></i> Phone</label>
+            			    <input type="text" name="phone" class="form-control text-light" placeholder="phone" style="background: #00968836;">
+            			
+            			    <label class="form-label text-light pt-2"><i class="fa-solid fa-lock"></i> Password</label>
+            			    <input type="password" name="password" class="form-control text-light" style="background: #00968836;" placeholder="password">
+
+            			    <label class="form-label text-light pt-2"><i class="fa-solid fa-lock"></i> Confirm Password</label>
+            			    <input type="password" name="conpassword" class="form-control text-light" style="background: #00968836;" placeholder="con password">
+
+            			    <button class="btn mt-3 bg-danger text-light w-100">Sign Up</button>
+            			    <center><a href="/" class="nav-link text-light" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Already have an account?</a> </center>
+            			</div>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+</section>
+	
+<!-- JAVASCRIPT LINK -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

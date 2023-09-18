@@ -1,0 +1,158 @@
+<%- include('../layout/header2.ejs') %>
+
+<div class="container mt-5">
+    <div class="row" >
+        <div style="overflow-x:auto;">
+            <table class="table table-bordered table-responsive">
+                <% if(message.length > 0){ %>
+                    <div class="alert alert-success" style="font-family:'Courier New', Courier, monospace">
+                        <%= message %>
+                    </div>
+                <% } %>
+                <thead class="text-center">
+                    <tr>
+                        <th colspan="8" class="bg-light"> <h3 style="font-family: serif;">Your enrolled <span class="text-danger">courses</span></h3></th>
+                    </tr>
+                    
+                    <tr>
+                        <!-- <th class="bg-light shadow-lg" style="font-family: serif;">S.no</th> -->
+                        
+                        <th style="background: whitesmoke; font-family: serif;">_id</th>
+
+                        <th class="des" style="background: whitesmoke; font-family: serif;">Username</th>
+            
+                        <th style="background: whitesmoke; font-family: serif;">Email</th>
+    
+                        <th style="background: whitesmoke; font-family: serif;">Course</th>
+
+                        <th style="background: whitesmoke; font-family: serif;">Branch</th>
+    
+                        <th style="background: whitesmoke; font-family: serif;">Status</th>
+    
+                        <th style="background: whitesmoke; font-family: serif;">Comment</th>
+            
+                        <th class="bg-light shadow-lg" style="font-family: serif;">Action</th>
+                    </tr>
+                </thead>
+            
+                <% d.forEach((item)=>{ %>
+                    <tbody class="text-center">
+                        <tr>
+                            <!-- <% if(item.length > 5){ %>
+                                <td class="align-middle" style="background: whitesmoke;"><h6 style="color:red ;"> <%= item %> </h6></td>
+                            <% }else{ %>
+                                <td class="align-middle" style="background: whitesmoke;"><h6 style="color:red ;">  </h6></td>
+                            <% } %> -->
+                            
+                            <td class="align-middle bg-light shadow-lg" style="color:#607D8A ;"><h6><%= item._id %></h6></td>
+            
+                            <td class="bg-light align-middle  shadow-lg" style="color:#607D8A ;"><h6><%= item.name %></h6></td>
+            
+                            <td class="align-middle bg-light shadow-lg" style="color:#607D8A ;"><h6><%= item.email %></h6></td>
+    
+                            <td class="align-middle bg-light shadow-lg" style="color:#607D8A ;"><h6><%= item.course %></h6></td>
+
+                            <td class="align-middle bg-light shadow-lg" style="color:#607D8A ;"><h6><%= item.branch %></h6></td>
+    
+                            <td class="align-middle bg-light shadow-lg" style="color:#607D8A ;"><h6>Pending</h6></td>
+    
+                            <td class="align-middle bg-light shadow-lg" style="color:#607D8A ;"><h6>wait</h6></td>
+            
+                            <td class="align-middle" style="background: whitesmoke;">
+                                <button  data-bs-toggle="modal" data-bs-target="#aa" class="btn bg-success text-light"><i class="fa-solid fa-pen-to-square"></i></button>
+                                <a href="/view/<%= item._id %>"><button class="btn text-light" style="background:#049eb7 ;"><i class="fa-solid fa-eye"></i></button></a>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+
+                <!-- Button trigger modal -->
+                <div class="modal fade" id="aa">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <!---modal header end--->
+                            <div class="modal-body bg-light">
+                                <section class="login">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div>
+                                                <form action="/update/<%= item._id %>" method="POST">
+                                                    <div class="frm">
+                                                        <h3 style="font-family:serif;" >Update Form of <span class="text-danger"><%= item.course %></span></h3>
+                                                        <div>
+                                                            <label class="form-label pt-2"><i class="fa-solid fa-signature"></i>
+                                                                Name</label>
+                                                            <input type="name" value="<%= item.name %>" name="name" class="form-control"
+                                                                placeholder="name" style="background: #00968836;">
+                
+                                                            <label class="form-label pt-2"><i class="fa-solid fa-envelope"></i>
+                                                                Email</label>
+                                                            <input type="Email" value="<%= item.email %>" name="email" class="form-control"
+                                                                placeholder="email" style="background: #00968836;">
+                
+                                                            <label class="form-label pt-2"><i class="fa-solid fa-phone"></i>
+                                                                Phone No.</label>
+                                                            <input type="text" value="<%= item.phone %>" name="phone" class="form-control "
+                                                                placeholder="phone" style="background: #00968836;">
+                
+                                                            <label class="form-label pt-2"><i class="fa-solid fa-address-card"></i>
+                                                                Address</label>
+                                                            <input type="address" name="address"
+                                                                class="form-control" value="<%= item.address %>" style="background: #00968836;" placeholder="address">
+                
+                                                            <label class="form-label pt-2"><i class="fa-solid fa-graduation-cap"></i>
+                                                                College</label>
+                                                            <select class="form-select" name="college">
+                                                                <option selected><%= item.college %></option>
+                                                                <option value="ITM">ITM</option>
+                                                                <option value="MITS">MITS</option>
+                                                                <option value="JIWAJI">Jiwaji</option>
+                                                                <option value="RJIT">RJIT</option>
+                                                            </select>
+                
+                                                            <label class="form-label pt-2"><i class="fa-solid fa-book"></i>
+                                                                Course</label>
+                                                            <select class="form-select" name="course">
+                                                                <option selected><%= item.course %></option>
+                                                                <option value="<%= item.course %>"></option>
+                                                            </select>
+                
+                                                            <label class="form-label pt-2"><i class="fa-solid fa-code-branch"></i>
+                                                                Branch</label>
+                                                            <select class="form-select" name="branch">
+                                                                <option selected><%= item.branch %></option>
+                                                                <option value="C.S.E">C.S.E</option>
+                                                                <option value="I.T">I.T</option>
+                                                                <option value="CIVIL">CIVIL</option>
+                                                                <option value="MECH">MECH</option>
+                                                            </select>
+                
+                                                            
+                                                            <a href=""></a><button class="btn mt-3 bg-danger text-light w-100">Update</button></a>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---modal end--->
+                <% }) %>
+
+                
+                
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<br><br><br>
+<%- include('../layout/footer.ejs') %>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Griveance Project</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+
+	<!-- BOOTSTRAP LINK -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+	<!-- Fontawesome Links -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+	<style>
+	</style>
+
+</head>
+<body>
+
+<section class="login">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="background2">
+            	<form action="/admin/loginverify" method="POST">
+            		<div class="frm" style="padding: 14% 30% 0% 28% ;">
+            			<div>
+							<% if(message.length > 0){ %>
+								<div class="alert alert-success" style="font-family:'Courier New', Courier, monospace">
+									<%= message %>
+								</div>
+							<% } %>
+
+							<% if(errmsg.length > 0){ %>
+								<div class="alert alert-danger" style="font-family:'Courier New', Courier, monospace">
+									<%= errmsg %>
+								</div>
+							<% } %>
+            			    <label class="form-label text-light"><i class="fa-solid fa-envelope"></i> Email or Number</label>
+            			    <input type="text" value="" name="email" name="phone" class="form-control text-light" placeholder="number or email" style="background: #00968836;">
+            			
+            			    <label class="form-label text-light pt-2"><i class="fa-solid fa-lock"></i> Password</label>
+            			    <input type="password" name="password" class="form-control text-light" style="background: #00968836;" placeholder="password">
+
+            			    <button class="btn mt-3 bg-danger text-light w-100">Login</button>
+							<center><a href="/admin/registration" class="nav-link text-light" ><h5 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">create your account</h5></a></center>
+							<center><a href="" class="nav-link text-light" ><h6 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">forgot password?</h6></a></center>
+            			   
+                            <h2 class="text-center pt-3" style="color: antiquewhite;"> <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i> <i class="fa-brands fa-telegram"></i> <i class="fa-brands fa-twitter"></i> </h2>       			    
+            			</div>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+</section>
+	
+<!-- JAVASCRIPT LINK -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

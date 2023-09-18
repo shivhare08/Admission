@@ -1,0 +1,572 @@
+<%- include('../layout/header.ejs') %>
+
+    <center>
+        <h3 class="text-dark" style="font-family:'Times New Roman', Times, serif"><i class="fa-solid fa-door-open"></i>
+            Welcome <span class="text-danger" style="font-size: 42px;"><%= n %></span></h3>
+            <h3 class="text-dark" style="font-family:'Times New Roman', Times, serif"><i class="fa-solid fa-envelope"></i>
+                Your email <span class="text-danger" style="font-size: 38px;"><%= e %></span></h3>
+        <h3 class="text-dark" style="font-family:'Times New Roman', Times, serif">Some <span class="text-danger">
+                courses for register </span> below</h3>
+    </center>
+
+    <section class="forms mt-3">
+        <div class="container">
+            <div class="row">
+                <h3 class="text-dark mt-5" style="font-family:'Times New Roman', Times, serif"><i
+                        class="fa-brands fa-studiovinari"></i> <span class="text-danger">College Entrance </span>courses
+                </h3>
+                <br><br>
+                <div class="col-md-3 col-6 a shadow-lg">
+                    <img src="image/f2.jpg" class="img-fluid">
+                    <h4 class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">BCA degree</h4>
+                    <h6 class="text-center pt-1">Duration <span class="text-danger">2 years</span></h6>
+                    <h6 class="text-center pt-1">Fees <del>4999</del> <span class="text-danger"> ₹2999</span></h6>
+                    <p class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">Lorem lpsum is
+                        simply dummy text A wallpaper or background </p>
+                        <div class="d-grid gap-2 col-11 mx-auto">
+                            <% if(b) { %>
+                                <center><a href="/enroll" class="display-toggle nav-link" ><button class="btn mt-1 bg-danger text-light" >Display</button></a></center>
+                                <% }else{ %>
+                                    <center><button class="btn mt-1 bg-danger text-light" data-bs-toggle="modal"
+                                        data-bs-target="#aa">Enroll</button></center>
+                            <% } %>
+                        </div>
+                    <br>
+                </div>
+                <div class="col-md-3 col-6 a ">
+                    <img src="image/f2.jpg" class="img-fluid">
+                    <h4 class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">MCA course</h4>
+                    <h6 class="text-center pt-1">Duration <span class="text-danger">2 years</span></h6>
+                    <h6 class="text-center pt-1">Fees <del>4999</del> <span class="text-danger">₹2999</span></h6>
+                    <p class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">Lorem lpsum is
+                        simply dummy text A wallpaper or background </p>
+                        <div class="d-grid gap-2 col-11 mx-auto">
+                            <% if(m) { %>
+                                <center><a href="/enroll" class="display-toggle nav-link" ><button class="btn mt-1 bg-danger text-light" >Display</button></a></center>
+                                <% }else{ %>
+                                    <center><button class="btn mt-1 bg-danger text-light" data-bs-toggle="modal"
+                                        data-bs-target="#bb">Enroll</button></center>
+                            <% } %>
+                        </div>
+                    <br>
+                </div>
+                <div class="col-md-3 col-6 a shadow-lg">
+                    <img src="image/f2.jpg" class="img-fluid">
+                    <h4 class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">B.tech course</h4>
+                    <h6 class="text-center pt-1">Duration <span class="text-danger">2 years</span></h6>
+                    <h6 class="text-center pt-1">Fees <del>4999</del> <span class="text-danger">₹2999</span></h6>
+                    <p class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">Lorem lpsum is
+                        simply dummy text A wallpaper or background </p>
+                        <div class="d-grid gap-2 col-11 mx-auto">
+                            <% if(bt) { %>
+                                <center><a href="/enroll" class="display-toggle nav-link" ><button class="btn mt-1 bg-danger text-light" >Display</button></a></center>
+                                <% }else{ %>
+                                    <center><button class="btn mt-1 bg-danger text-light" data-bs-toggle="modal"
+                                        data-bs-target="#cc">Enroll</button></center>
+                            <% } %>
+                        </div>
+                    <br>
+                </div>
+                <div class="col-md-3 col-6 a ">
+                    <img src="image/f2.jpg" class="img-fluid">
+                    <h4 class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">M.tech course</h4>
+                    <h6 class="text-center pt-1">Duration <span class="text-danger">2 years</span></h6>
+                    <h6 class="text-center pt-1">Fees <del>4999</del> <span class="text-danger">₹2999</span></h6>
+                    <p class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">Lorem lpsum is
+                        simply dummy text A wallpaper or background </p>
+                        <div class="d-grid gap-2 col-11 mx-auto">
+                            <% if(mt) { %>
+                                <center><a href="/enroll" class="display-toggle nav-link" ><button class="btn mt-1 bg-danger text-light" >Display</button></a></center>
+                                <% }else{ %>
+                                    <center><button class="btn mt-1 bg-danger text-light" data-bs-toggle="modal"
+                                        data-bs-target="#dd">Enroll</button></center>
+                            <% } %>
+                        </div>
+                    <br>
+                </div>
+
+                <br><br>
+
+                <h3 class="text-dark mt-5" style="font-family:'Times New Roman', Times, serif"><i
+                        class="fa-brands fa-studiovinari"></i> <span class="text-danger">State exam </span>courses</h3>
+                <br><br>
+                <div class="col-md-3 col-6 a shadow-lg">
+                    <img src="image/f2.jpg" class="img-fluid">
+                    <h4 class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">UPSSC course</h4>
+                    <h6 class="text-center pt-1">Duration <span class="text-danger">2 years</span></h6>
+                    <h6 class="text-center pt-1">Fees <del>4999</del> <span class="text-danger"> ₹2999</span></h6>
+                    <p class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">Lorem lpsum is
+                        simply dummy text A wallpaper or background </p>
+                    <center><button class="btn mt-1 bg-danger text-light">Enroll</button></center><br>
+                </div>
+                <div class="col-md-3 col-6 a ">
+                    <img src="image/f2.jpg" class="img-fluid">
+                    <h4 class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">BSPHCL AO course
+                    </h4>
+                    <h6 class="text-center pt-1">Duration <span class="text-danger">2 years</span></h6>
+                    <h6 class="text-center pt-1">Fees <del>4999</del> <span class="text-danger">₹2999</span></h6>
+                    <p class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">Lorem lpsum is
+                        simply dummy text A wallpaper or background </p>
+                    <center><button class="btn mt-1 bg-danger text-light">Enroll</button></center><br>
+                </div>
+                <div class="col-md-3 col-6 a shadow-lg">
+                    <img src="image/f2.jpg" class="img-fluid">
+                    <h4 class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">BPSC course</h4>
+                    <h6 class="text-center pt-1">Duration <span class="text-danger">2 years</span></h6>
+                    <h6 class="text-center pt-1">Fees <del>4999</del> <span class="text-danger">₹2999</span></h6>
+                    <p class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">Lorem lpsum is
+                        simply dummy text A wallpaper or background </p>
+                    <center><button class="btn mt-1 bg-danger text-light">Enroll</button></center><br>
+                </div>
+                <div class="col-md-3 col-6 a ">
+                    <img src="image/f2.jpg" class="img-fluid">
+                    <h4 class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">UPCO course</h4>
+                    <h6 class="text-center pt-1">Duration <span class="text-danger">2 years</span></h6>
+                    <h6 class="text-center pt-1">Fees <del>4999</del> <span class="text-danger">₹2999</span></h6>
+                    <p class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">Lorem lpsum is
+                        simply dummy text A wallpaper or background </p>
+                    <center><button class="btn mt-1 bg-danger text-light">Enroll</button></center><br>
+                </div>
+
+                <br><br>
+
+                <h3 class="text-dark mt-5" style="font-family:'Times New Roman', Times, serif"><i
+                        class="fa-brands fa-studiovinari"></i> <span class="text-danger">Central exam </span>courses
+                </h3>
+                <br><br>
+                <div class="col-md-3 col-6 a shadow-lg">
+                    <img src="image/f1.jpg" class="img-fluid">
+                    <h4 class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">UPSC CSE course
+                    </h4>
+                    <h6 class="text-center pt-1">Duration <span class="text-danger">2 years</span></h6>
+                    <h6 class="text-center pt-1">Fees <del>4999</del> <span class="text-danger"> ₹2999</span></h6>
+                    <p class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">Lorem lpsum is
+                        simply dummy text A wallpaper or background </p>
+                    <center><button class="btn mt-1 bg-danger text-light">Enroll</button></center><br>
+                </div>
+                <div class="col-md-3 col-6 a ">
+                    <img src="image/f1.jpg" class="img-fluid">
+                    <h4 class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">AFCAT course</h4>
+                    <h6 class="text-center pt-1">Duration <span class="text-danger">2 years</span></h6>
+                    <h6 class="text-center pt-1">Fees <del>4999</del> <span class="text-danger">₹2999</span></h6>
+                    <p class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">Lorem lpsum is
+                        simply dummy text A wallpaper or background </p>
+                    <center><button class="btn mt-1 bg-danger text-light">Enroll</button></center><br>
+                </div>
+                <div class="col-md-3 col-6 a shadow-lg">
+                    <img src="image/f1.jpg" class="img-fluid">
+                    <h4 class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">IB ACIO course</h4>
+                    <h6 class="text-center pt-1">Duration <span class="text-danger">2 years</span></h6>
+                    <h6 class="text-center pt-1">Fees <del>4999</del> <span class="text-danger">₹2999</span></h6>
+                    <p class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">Lorem lpsum is
+                        simply dummy text A wallpaper or background </p>
+                    <center><button class="btn mt-1 bg-danger text-light">Enroll</button></center><br>
+                </div>
+                <div class="col-md-3 col-6 a ">
+                    <img src="image/f1.jpg" class="img-fluid">
+                    <h4 class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">CDS course</h4>
+                    <h6 class="text-center pt-1">Duration <span class="text-danger">2 years</span></h6>
+                    <h6 class="text-center pt-1">Fees <del>4999</del> <span class="text-danger">₹2999</span></h6>
+                    <p class="text-center pt-1" style="font-family:'Times New Roman', Times, serif">Lorem lpsum is
+                        simply dummy text A wallpaper or background </p>
+                    <center><button class="btn mt-1 bg-danger text-light">Enroll</button></center><br>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button trigger modal -->
+        <div class="modal fade" id="aa">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!---modal header end--->
+                    <div class="modal-body bg-light">
+                        <section class="login">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div>
+                                        <form action="/Enroll/Model" method="POST">
+                                            <div class="frm">
+                                                <h3 style="font-family:serif;" >Enrollment Form of <span class="text-danger">BCA</span></h3>
+                                                <div>
+                                                    <!-- <input type="hidden" name="userid" value="<%= id %>" class="form-control"> -->
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-signature"></i>
+                                                        Name</label>
+                                                    <input type="name" name="name" value="<%= n %>" class="form-control"
+                                                        placeholder="name" style="background: #00968836;">
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-envelope"></i>
+                                                        Email</label>
+                                                    <input type="Email" name="email" value="<%= e %>" class="form-control"
+                                                        placeholder="email" style="background: #00968836;">
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-phone"></i>
+                                                        Phone No.</label>
+                                                    <input type="text" name="phone" class="form-control "
+                                                        placeholder="phone" style="background: #00968836;">
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-address-card"></i>
+                                                        Address</label>
+                                                    <input type="address" name="address"
+                                                        class="form-control " style="background: #00968836;"
+                                                        placeholder="address">
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-person-half-dress"></i>
+                                                        Gender</label>
+                                                    <div>
+                                                        <input type="radio" name="gender" value="male" id="radio1"
+                                                            class="form-check-input">
+                                                        <label class="form-check-label" id="radio1"
+                                                            for="gender">Male</label>
+                                                    </div>
+
+                                                    <div>
+                                                        <input type="radio" name="gender" value="female" id="radio2"
+                                                            class="form-check-input">
+                                                        <label class="form-check-label" id="radio2" for="gender">
+                                                            Female</label>
+                                                    </div>
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-graduation-cap"></i>
+                                                        College</label>
+                                                    <select class="form-select" name="college">
+                                                        <option selected>Select college</option>
+                                                        <option value="ITM">ITM</option>
+                                                        <option value="MITS">MITS</option>
+                                                        <option value="JIWAJI">Jiwaji</option>
+                                                        <option value="RJIT">RJIT</option>
+                                                    </select>
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-book"></i>
+                                                        Course</label>
+                                                    <select class="form-select" name="course">
+                                                        <option selected>Select course</option>
+                                                        <option value="BCA">BCA</option>
+                                                        <!-- <option value="BCA">MCA</option>
+                                                        <option value="BCA">B.TECH</option>
+                                                        <option value="BCA">M.TECH</option> -->
+                                                    </select>
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-code-branch"></i>
+                                                        Branch</label>
+                                                    <select class="form-select" name="branch">
+                                                        <option selected>Select Branch</option>
+                                                        <option value="C.S.E">C.S.E</option>
+                                                        <option value="I.T">I.T</option>
+                                                        <option value="CIVIL">CIVIL</option>
+                                                        <option value="MECH">MECH</option>
+                                                    </select>
+
+                                                    <button class="btn mt-3 bg-danger text-light w-100">Enroll</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---modal end--->
+
+        <!-- Button trigger modal -->
+        <div class="modal fade" id="bb">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!---modal header end--->
+                    <div class="modal-body bg-light">
+                        <section class="login">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div>
+                                        <form action="/Enroll/Model" method="POST">
+                                            <div class="frm">
+                                                <h3 style="font-family:serif;" >Enrollment Form of <span class="text-danger">MCA</span></h3>
+                                                <div>
+
+                                                    <input type="hidden" name="userid" value="<%= id %>" class="form-control">
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-signature"></i>
+                                                        Name</label>
+                                                    <input type="name" name="name" value="<%= n %>" class="form-control"
+                                                        placeholder="name" style="background: #00968836;">
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-envelope"></i>
+                                                        Email</label>
+                                                    <input type="Email" name="email" value="<%= e %>" class="form-control"
+                                                        placeholder="email" style="background: #00968836;">
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-phone"></i>
+                                                        Phone No.</label>
+                                                    <input type="text" name="phone" class="form-control "
+                                                        placeholder="phone" style="background: #00968836;">
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-address-card"></i>
+                                                        Address</label>
+                                                    <input type="address" name="address"
+                                                        class="form-control" style="background: #00968836;"
+                                                        placeholder="address">
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-person-half-dress"></i>
+                                                        Gender</label>
+                                                    <div>
+                                                        <input type="radio" name="gender" value="male" id="radio1"
+                                                            class="form-check-input">
+                                                        <label class="form-check-label" id="radio1"
+                                                            for="gender">Male</label>
+                                                    </div>
+
+                                                    <div>
+                                                        <input type="radio" name="gender" value="female" id="radio2"
+                                                            class="form-check-input">
+                                                        <label class="form-check-label" id="radio2" for="gender">
+                                                            Female</label>
+                                                    </div>
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-graduation-cap"></i>
+                                                        College</label>
+                                                    <select class="form-select" name="college">
+                                                        <option selected>Select college</option>
+                                                        <option value="ITM">ITM</option>
+                                                        <option value="MITS">MITS</option>
+                                                        <option value="JIWAJI">Jiwaji</option>
+                                                        <option value="RJIT">RJIT</option>
+                                                    </select>
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-book"></i>
+                                                        Course</label>
+                                                    <select class="form-select" name="course">
+                                                        <option selected>Select course</option>
+                                                        <option value="MCA">MCA</option>
+                                                    </select>
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-code-branch"></i>
+                                                        Branch</label>
+                                                    <select class="form-select" name="branch">
+                                                        <option selected>Select Branch</option>
+                                                        <option value="C.S.E">C.S.E</option>
+                                                        <option value="I.T">I.T</option>
+                                                        <option value="CIVIL">CIVIL</option>
+                                                        <option value="MECH">MECH</option>
+                                                    </select>
+
+                                                    <button class="btn mt-3 bg-danger text-light w-100">Enroll</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---modal end--->
+
+        <!-- Button trigger modal -->
+        <div class="modal fade" id="cc">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!---modal header end--->
+                    <div class="modal-body bg-light">
+                        <section class="login">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div>
+                                        <form action="/Enroll/Model" method="post">
+                                            <div class="frm">
+                                                <h3 style="font-family:serif;" >Enrollment Form of <span class="text-danger">B.tech</span></h3>
+                                                <div>
+
+                                                    <input type="hidden" name="userid" value="<%= id %>" class="form-control">
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-signature"></i>
+                                                        Name</label>
+                                                    <input type="name" name="name" value="<%= n %>" class="form-control"
+                                                        placeholder="name" style="background: #00968836;">
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-envelope"></i>
+                                                        Email</label>
+                                                    <input type="Email" name="email" value="<%= e %>" class="form-control"
+                                                        placeholder="email" style="background: #00968836;">
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-phone"></i>
+                                                        Phone No.</label>
+                                                    <input type="text" name="phone" class="form-control "
+                                                        placeholder="phone" style="background: #00968836;">
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-address-card"></i>
+                                                        Address</label>
+                                                    <input type="address" name="address"
+                                                        class="form-control" style="background: #00968836;"
+                                                        placeholder="address">
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-person-half-dress"></i>
+                                                        Gender</label>
+                                                    <div>
+                                                        <input type="radio" name="gender" value="male" id="radio1"
+                                                            class="form-check-input">
+                                                        <label class="form-check-label" id="radio1"
+                                                            for="gender">Male</label>
+                                                    </div>
+
+                                                    <div>
+                                                        <input type="radio" name="gender" value="female" id="radio2"
+                                                            class="form-check-input">
+                                                        <label class="form-check-label" id="radio2" for="gender">
+                                                            Female</label>
+                                                    </div>
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-graduation-cap"></i>
+                                                        College</label>
+                                                    <select class="form-select" name="college">
+                                                        <option selected>Select college</option>
+                                                        <option value="ITM">ITM</option>
+                                                        <option value="MITS">MITS</option>
+                                                        <option value="JIWAJI">Jiwaji</option>
+                                                        <option value="RJIT">RJIT</option>
+                                                    </select>
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-book"></i>
+                                                        Course</label>
+                                                    <select class="form-select" name="course">
+                                                        <option selected>Select course</option>
+                                                        <option value="B.Tech">B.Tech</option>
+                                                    </select>
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-code-branch"></i>
+                                                        Branch</label>
+                                                    <select class="form-select" name="branch">
+                                                        <option selected>Select branch</option>
+                                                        <option value="C.S.E">C.S.E</option>
+                                                        <option value="I.T">I.T</option>
+                                                        <option value="CIVIL">CIVIL</option>
+                                                        <option value="MECH">MECH</option>
+                                                    </select>
+
+                                                    <button class="btn mt-3 bg-danger text-light w-100">Enroll</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---modal end--->
+
+        <!-- Button trigger modal -->
+        <div class="modal fade" id="dd">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!---modal header end--->
+                    <div class="modal-body bg-light">
+                        <section class="login">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div>
+                                        <form action="/Enroll/Model" method="POST">
+                                            <div class="frm">
+                                                <h3 style="font-family:serif;" >Enrollment Form of <span class="text-danger">M.tech</span></h3>
+                                                <div>
+                                                    <input type="hidden" name="userid" value="<%= id %>" class="form-control">
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-signature"></i>
+                                                        Name</label>
+                                                    <input type="name" name="name" value="<%= n %>" class="form-control"
+                                                        placeholder="name" style="background: #00968836;">
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-envelope"></i>
+                                                        Email</label>
+                                                    <input type="Email" name="email" value="<%= e %>" class="form-control"
+                                                        placeholder="email" style="background: #00968836;">
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-phone"></i>
+                                                        Phone No.</label>
+                                                    <input type="text" name="phone" class="form-control "
+                                                        placeholder="phone" style="background: #00968836;">
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-address-card"></i>
+                                                        Address</label>
+                                                    <input type="address" name="address"
+                                                        class="form-control" style="background: #00968836;"
+                                                        placeholder="address">
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-person-half-dress"></i>
+                                                        Gender</label>
+                                                    <div>
+                                                        <input type="radio" name="gender" value="male" id="radio1"
+                                                            class="form-check-input">
+                                                        <label class="form-check-label" id="radio1"
+                                                            for="gender">Male</label>
+                                                    </div>
+
+                                                    <div>
+                                                        <input type="radio" name="gender" value="female" id="radio2"
+                                                            class="form-check-input">
+                                                        <label class="form-check-label" id="radio2" for="gender">
+                                                            Female</label>
+                                                    </div>
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-graduation-cap"></i>
+                                                        College</label>
+                                                    <select class="form-select" name="college">
+                                                        <option selected>Select college</option>
+                                                        <option value="ITM">ITM</option>
+                                                        <option value="MITS">MITS</option>
+                                                        <option value="JIWAJI">Jiwaji</option>
+                                                        <option value="RJIT">RJIT</option>
+                                                    </select>
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-book"></i>
+                                                        Course</label>
+                                                    <select class="form-select" name="course">
+                                                        <option selected>Select course</option>
+                                                        <option value="M.Tech">M.Tech</option>
+                                                    </select>
+
+                                                    <label class="form-label pt-2"><i class="fa-solid fa-code-branch"></i>
+                                                        Branch</label>
+                                                    <select class="form-select" name="branch">
+                                                        <option selected>Select Branch</option>
+                                                        <option value="C.S.E">C.S.E</option>
+                                                        <option value="I.T">I.T</option>
+                                                        <option value="CIVIL">CIVIL</option>
+                                                        <option value="MECH">MECH</option>
+                                                    </select>
+
+                                                    <button class="btn mt-3 bg-danger text-light w-100">Enroll</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---modal end--->
+    </section>
+
+    <br><br><br>
+
+
+
+    <%- include('../layout/footer.ejs') %>

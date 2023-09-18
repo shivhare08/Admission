@@ -1,0 +1,147 @@
+/*/MANDATORY*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+/*KNOWLEGE*/
+
+/*<span class="border border-primary"></span>
+<span class="border border-secondary"></span>
+<span class="border border-success"></span>
+<span class="border border-danger"></span>
+<span class="border border-warning"></span>
+<span class="border border-info"></span>
+<span class="border border-light"></span>
+<span class="border border-dark"></span>
+<span class="border border-white"></span>*/
+
+
+/*HEADER*/
+
+.header .background{
+	background-image: url(../image/f3.jpg);
+/*	background-size: contain;*/
+	height: 90vh;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+ .background2{
+	background-image: url(../image/background4.jpg);
+/*	background-size: contain;*/
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+input::placeholder{
+	color: white!important;
+}
+
+
+
+.navbar-nav{
+	margin-left:20%;
+}
+.navbar-nav li{
+	font-family: serif;
+	font-size: 25px;
+}
+.header .h{
+	letter-spacing: 6px;
+	font-family: serif;
+	color: #2d5c56;
+	font-size: 50px;
+}
+.navbar-nav li a{
+	transition: transform .5s; /* Animation */	
+}
+
+.navbar-nav li a:hover{
+	transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+	border-bottom: 2px solid black;
+	border-left:2px solid black ;
+}
+/* .navbar-nav li a:hover{
+	border-bottom: 2px solid;
+	font-size: 28px;
+} */
+
+
+/* forms */
+/* .forms .f{
+	background-image: url(../image/background1.jpg);
+	width: 25%;
+	background-size: contain;
+	height: 50vh;
+	background-repeat: no-repeat;
+	background-position: center;
+	
+}
+
+.forms .a:hover{
+	background: rgb(218, 209, 215);
+	border-bottom: 2px solid;
+} */
+
+.forms .a {	
+	transition: transform .5s; /* Animation */	
+}
+  
+.forms .a:hover {
+	transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+	border-bottom: 2px solid red;
+	border-left:2px solid rgb(7, 7, 7) ;
+}
+
+.about .a {	
+	transition: transform .5s; /* Animation */	
+}
+  
+.about .a:hover {
+	transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+	border-bottom: 2px solid red;
+	border-left:2px solid rgb(7, 7, 7) ;
+}
+
+
+
+/*FOOTER*/
+
+.footer .foot{
+	background: #0b0f21;
+}
+.footer p{
+	font-family: sans-serif;
+	text-align: justify;
+	color: white;
+	letter-spacing: 1px;
+	padding: 6px 43px 0px 47px;
+}
+.footer h4{
+	font-family: serif;
+	text-align: justify;
+	color: white;
+	letter-spacing: 1px;
+	padding-top: 10px;
+}
+.footer span{
+	letter-spacing: 1px;
+	color: #28c9b4;
+}
+.footer h6{
+	letter-spacing: 1px;
+	font-family: serif;
+	text-align: justify;
+	color: white;
+	letter-spacing: 1px;
+}
+.footer .hr{
+	color: white;
+}

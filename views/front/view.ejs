@@ -1,0 +1,59 @@
+<%- include('../layout/header2.ejs') %>
+<br><br><br>
+    <div class="container">
+        <div class="row">
+            <div style="overflow-x:auto;">
+                <table class="table table-bordered table-responsive">
+                    <thead class="text-center">
+                        <tr>
+                            <th colspan="8" class="bg-light">
+                                <h3 style="font-family: serif;">Your enrolled <span class="text-danger">Section</span><br>
+                                    your _id - <span class="text-danger"><%= v._id %></span>
+                                </h3>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th style="background: whitesmoke; font-family: serif;">Name</th>
+                            <th style="background: whitesmoke; font-family: serif;">Email</th>
+                            <th style="background: whitesmoke; font-family: serif;">Phone</th>
+                            <th style="background: whitesmoke; font-family: serif;">Gender</th>
+                            <th style="background: whitesmoke; font-family: serif;">Address</th>
+                            <th style="background: whitesmoke; font-family: serif;">Course</th>
+                            <th style="background: whitesmoke; font-family: serif;">Branch</th>
+                            <th style="background: whitesmoke; font-family: serif;">College</th>
+                        </tr>
+
+                    <tbody class="text-center">
+                        <td class="bg-light align-middle shadow-lg" style="color:#607D8A ;">
+                            <h6><%= v.name %></h6>
+                        </td>
+                        <td class="bg-light align-middle shadow-lg" style="color:#607D8A ;">
+                            <h6><%= v.email %></h6>
+                        </td>
+                        <td class="bg-light align-middle shadow-lg" style="color:#607D8A ;">
+                            <h6><%= v.phone %></h6>
+                        </td>
+                        <td class="bg-light align-middle shadow-lg" style="color:#607D8A ;">
+                            <h6><%= v.gender %></h6>
+                        </td>
+                        <td class="bg-light align-middle shadow-lg" style="color:#607D8A ;">
+                            <h6><%= v.address %></h6>
+                        </td>
+                        <td class="bg-light align-middle shadow-lg" style="color:#607D8A ;">
+                            <h6><%= v.course %></h6>
+                        </td>
+                        <td class="bg-light align-middle shadow-lg" style="color:#607D8A ;">
+                            <h6><%= v.branch %></h6>
+                        </td>
+                        <td class="bg-light align-middle shadow-lg" style="color:#607D8A ;">
+                            <h6><%= v.college %></h6>
+                        </td>
+                    </tbody>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <%- include('../layout/footer.ejs') %>
