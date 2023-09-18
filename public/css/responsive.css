@@ -63,7 +63,7 @@
 	.create h6{
 		font-size: 12px;
 	}
-	.frm input{
+	.frmlg input{
 		width: 130%;
 	}
 	
@@ -71,16 +71,16 @@
 
 
 @media(max-width:360px){
-	.frm label{
+	.frmlg label{
 		font-size: 12px;
 	}
-	.frm input{
+	.frmlg input{
 		width: 120%;
 	}
 }
 
 @media(max-width:274px){
-	.frm label{
+	.frmlg label{
 		font-size: 9px;
 	}
 }
@@ -206,10 +206,10 @@
 
 
 @media(max-width:330px){
-	.frm input{
+	.frmlg input{
 		width: 150%;
 	}
-	.frm button{
+	.frmlg button{
 		width: 150%;
 	}
 }
