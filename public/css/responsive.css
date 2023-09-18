@@ -56,6 +56,53 @@
 
 }
 
+@media(max-width:440px){
+	.create h5{
+		font-size: 15px;
+	}
+	.create h6{
+		font-size: 12px;
+	}
+	.frm input{
+		width: 130%;
+	}
+	
+}
+
+
+@media(max-width:360px){
+	.frm label{
+		font-size: 12px;
+	}
+	.frm input{
+		width: 120%;
+	}
+}
+
+@media(max-width:274px){
+	.frm label{
+		font-size: 9px;
+	}
+}
+
+@media(max-width:360px){
+	.create h5{
+		font-size: 12px;
+	}
+	.create h6{
+		font-size: 10px;
+	}
+}
+
+@media(max-width:270px){
+	.create h5{
+		font-size: 10px;
+	}
+	.create h6{
+		font-size: 8px;
+	}
+}
+
 @media(max-width:767px){
 	.background .h{
 		font-size: 34px;
@@ -155,4 +202,14 @@
 		font-size:12px ;
 	}
 
+}
+
+
+@media(max-width:330px){
+	.frm input{
+		width: 150%;
+	}
+	.frm button{
+		width: 150%;
+	}
 }
