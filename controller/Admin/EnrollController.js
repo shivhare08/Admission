@@ -15,7 +15,7 @@ class EnrollController{
                 college:req.body.college,
                 branch:req.body.branch,
                 course:req.body.course,
-                // userid:_id
+                userid:req.body.userid,
             })
             // console.log(data)
             await data.save()

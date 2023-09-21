@@ -25,8 +25,9 @@ class FrontController{
 
     static enrollpage = async (req,res)=>{
         try{
-            // const {name , _id , email} = req.admin
-            const data = await EnrollModel.find() //user_id model ki feild h {userid:_id}
+            const {_id} = req.admin
+            const data = await EnrollModel.find({userid:_id}) //user_id model ki feild h {userid:_id}
+            // console.log(_id)
             res.render('front/enroll.ejs',{d:data,message:req.flash('done')})
         }catch(error){
             console.log(error)
