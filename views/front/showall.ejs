@@ -1,0 +1,45 @@
+<%- include('../layout/header2.ejs') %>
+
+<div class="container">
+    <div class="row">
+
+        <h2 class="text-center mt-3" style="font-family:'Times New Roman', Times, serif">Total <span class="text-danger">Registrations</span></h2>
+            <div style="overflow-x:auto;">
+                <table class="table table-bordered table-responsive">
+                    <thead class="text-center">
+                        
+                        <tr>
+                            <th style="background: whitesmoke; font-family: serif;">S.no</th>
+                            
+                            <th style="background: whitesmoke; font-family: serif;">_id</th>
+    
+                            <th class="des" style="background: whitesmoke; font-family: serif;">Username</th>
+                
+                            <th style="background: whitesmoke; font-family: serif;">Email</th>        
+                        </tr>
+                    </thead>
+                
+                    <% sa.forEach((item)=>{ %>
+                        <tbody class="text-center">
+                            <tr>                                
+                               <td class="align-middle bg-light shadow-lg" style="color:#607D8A ;">
+                                <ul>
+                                
+                                  <li><%= item.length %></li>     
+                                </ul>     
+                                </td>                               
+                                
+                                <td class="align-middle bg-light shadow-lg" style="color:#607D8A ;"><h6><%= item._id %></h6></td>
+                
+                                <td class="bg-light align-middle  shadow-lg" style="color:#607D8A ;"><h6><%=  item.name %></h6></td>
+                
+                                <td class="align-middle bg-light shadow-lg" style="color:#607D8A ;"><h6><%= item.email %></h6></td>        
+                            </tr>                    
+                        </tbody> 
+                    <% }) %>                
+                </table> 
+            </div>
+    </div>
+</div>
+
+<%- include('../layout/footer.ejs') %>

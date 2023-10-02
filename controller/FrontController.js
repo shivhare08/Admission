@@ -1,14 +1,18 @@
 const EnrollModel = require('../model/enroll')
+const AdminModel = require('../model/admin')
 
 class FrontController{
     static home = async (req,res)=>{
         try{
+            const options = { weekday : 'long', year : 'numeric', month : 'long', day : 'numeric' };
+            const today = new Date();
+            const day = today.toLocaleDateString("en-US", options); 
             const {name , _id , email} = req.admin
             const BCA = await EnrollModel.findOne({course : 'BCA'})
             const MCA = await EnrollModel.findOne({course : 'MCA'})
             const BTECH = await EnrollModel.findOne({course : 'B.Tech'})
             const MTECH = await EnrollModel.findOne({course : 'M.Tech'})
-            res.render('front/home.ejs',{n:name , e:email , id:_id , b:BCA , m:MCA , bt:BTECH , mt:MTECH})
+            res.render('front/home.ejs',{d:day , n:name , e:email , id:_id , b:BCA , m:MCA , bt:BTECH , mt:MTECH})
         }catch(error){
             console.log(error)
         }
@@ -17,7 +21,18 @@ class FrontController{
     static about = async (req,res)=>{
         try{
             const {name , _id , email} = req.admin
-            res.render('front/about.ejs')
+            const totalusers = await AdminModel.find().sort({_id:-1}).limit(5)
+            res.render('front/about.ejs',{tu : totalusers})
+        }catch(error){
+            console.log(error)
+        }
+    }
+
+    static showall = async (req,res)=>{
+        try{
+            const {name , _id , email} = req.admin
+            const showalluser = await AdminModel.find()
+            res.render('front/showall.ejs',{ sa : showalluser})
         }catch(error){
             console.log(error)
         }
@@ -36,8 +51,11 @@ class FrontController{
 
     static contact = async (req,res)=>{
         try{
+            const options = { weekday : 'long', year : 'numeric', month : 'long', day : 'numeric' };
+            const today = new Date();
+            const day = today.toLocaleDateString("en-US", options); 
             const {name , _id , email} = req.admin
-            res.render('front/contact.ejs',{message : req.flash('success')})
+            res.render('front/contact.ejs',{d : day , message : req.flash('success')})
         }catch(error){
             console.log(error)
         }

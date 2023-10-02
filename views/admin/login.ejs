@@ -24,6 +24,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="background2">
+				<h4 class="text-light"><%= d %></h4>
             	<form action="/admin/loginverify" method="POST">
             		<div class="frm frmlg" style="padding: 14% 30% 0% 28% ;">
             			<div>
@@ -38,6 +39,7 @@
 									<%= errmsg %>
 								</div>
 							<% } %>
+					
             			    <label class="form-label text-light"><i class="fa-solid fa-envelope"></i> Email or Number</label>
             			    <input type="text" value="" name="email" name="phone" class="form-control text-light" placeholder="email" style="background: #00968836;">
             			

@@ -5,7 +5,10 @@ const jwt = require('jsonwebtoken')
 class AdminController{
     static login = async (req,res)=>{
         try{
-            res.render('admin/login.ejs',{message : req.flash('success'),errmsg : req.flash('error')})
+            const options = { weekday : 'long', year : 'numeric', month : 'long', day : 'numeric' };
+            const today = new Date();
+            const day = today.toLocaleDateString("en-US", options); 
+            res.render('admin/login.ejs',{d:day , message : req.flash('success'),errmsg : req.flash('error')})
         }catch(error){
             console.log(error)
         }
@@ -36,7 +39,7 @@ class AdminController{
                                 name:name,
                                 email:email,
                                 phone:phone,
-                                password:hashpassword
+                                password:hashpassword,
                                 })
                                 await result.save()
                                 req.flash('success','Registeration successfully login here')

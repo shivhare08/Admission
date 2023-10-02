@@ -9,6 +9,7 @@ const auth = require('../middleware/auth')
 //frontcontroller
 router.get('/dashboard',auth,FrontController.home)
 router.get('/about',auth,FrontController.about)
+router.get('/showall',auth,FrontController.showall)
 router.get('/enroll',auth,FrontController.enrollpage)
 router.get('/contact',auth,FrontController.contact)
 router.get('/view/:id',auth,FrontController.viewenrolled)
