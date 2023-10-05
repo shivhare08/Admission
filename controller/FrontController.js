@@ -8,10 +8,10 @@ class FrontController{
             const today = new Date();
             const day = today.toLocaleDateString("en-US", options); 
             const {name , _id , email} = req.admin
-            const BCA = await EnrollModel.findOne({course : 'BCA'})
-            const MCA = await EnrollModel.findOne({course : 'MCA'})
-            const BTECH = await EnrollModel.findOne({course : 'B.Tech'})
-            const MTECH = await EnrollModel.findOne({course : 'M.Tech'})
+            const BCA = await EnrollModel.findOne({userid : _id , course : 'BCA' })
+            const MCA = await EnrollModel.findOne({userid : _id , course : 'MCA'})
+            const BTECH = await EnrollModel.findOne({userid : _id , course : 'BTECH'})
+            const MTECH = await EnrollModel.findOne({userid : _id , course : 'MTECH'})
             res.render('front/home.ejs',{d:day , n:name , e:email , id:_id , b:BCA , m:MCA , bt:BTECH , mt:MTECH})
         }catch(error){
             console.log(error)
